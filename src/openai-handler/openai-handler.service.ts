@@ -14,7 +14,7 @@ export class OpenaiHandlerService {
 
   async getOpenAIResult(prompt: string): Promise<string> {
     if (!prompt) {
-      throw new BadRequestException('Prmpt field is required');
+      throw new BadRequestException('Prompt field is required');
     }
 
     try {

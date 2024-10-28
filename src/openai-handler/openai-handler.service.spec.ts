@@ -1,9 +1,9 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { OpenaiHandlerService } from './openai-handler.service';
-import { ConfigService } from '@nestjs/config';
-import { InternalServerErrorException, BadRequestException } from '@nestjs/common';
-import { ChatCompletion } from 'openai/resources';
 import OpenAI from 'openai';
+import { ConfigService } from '@nestjs/config';
+import { ChatCompletion } from 'openai/resources';
+import { Test, TestingModule } from '@nestjs/testing';
+import { InternalServerErrorException, BadRequestException } from '@nestjs/common';
+import { OpenaiHandlerService } from './openai-handler.service';
 
 jest.mock('openai');
 

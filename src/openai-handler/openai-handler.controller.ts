@@ -9,10 +9,6 @@ export class OpenaiHandlerController {
   @Post('generate-text')
   async handlePrompt(@Body() createPromptDto: CreatePromptDto): Promise<{ result: string }> {
     const { prompt } = createPromptDto;
-
-    if (!prompt || prompt.trim() === '') {
-      throw new BadRequestException('Prompt cannot be empty.');
-    }
     
     const result = await this.openAiHandlerService.getOpenAIResult(prompt);
     return { result };
